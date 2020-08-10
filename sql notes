@@ -1,0 +1,50 @@
+8.7 - 8.8周五、周六 
+	
+1.	SQL语言，SQL语句对大小写不敏感。
+2.	Select * from (最好不要这么用)，各字段都需要写上去
+3.	Commit作用于函数直接生效
+4.	%N 结尾为N的模糊查询，N%开头为N的模糊查询。
+5.	给count加条件，用having，不用where
+6.	As num 用来指定返回列的名称
+
+
+	个人进度任务：
+1)	新建表，插入数据，commit，之后点击全部编译，使表格生效，若编辑了多行，点击编译，则会出现错误。
+2)	Distinct用于返回唯一不同的值，select distinct 列名称 from 表名称。
+3)	Where 有条件地从表中选取数据，可以将where添加到表中。select 列名称 from 表名称 where 列 运算符 值。><= between like
+4)	单引号环绕文本值，数值不需要引号。
+5)	Update修改表中的数据，update 表名称 set 列名称=新值 where列名称=某值。
+
+
+6)	Delete from 表名称 where 列名称=值。
+7)	Order by 对结果集进行排序，默认升序，降序用desc。
+8)	Delete删除表中的行，drop删除表。
+9)	IN 在where子句中规定多个值。Select 列名 from 表名 where 列名in(值1，值2…)汉字值用单引号。
+10)	跟IN不同，between…and…是介于两者之间的数据范围。
+
+
+11)	As 起别名，查询时可以给列起别名，不可给表起别名。Select 列值 as别名 from table
+12)	连接，从两个或者多个表中查询数据。
+select student.sno,student.sname,sc.score from student,sc where student.sno=SC.SNO
+13)	使用内连接、左连接、右连接。
+Join：表中至少有一个匹配，返回行。
+Left join：右表中没有匹配，也从左表中返回所有匹配。
+Select 值名 from 表1名left join 表2名on 表1.列=表2.列。
+Right join：左表中没有匹配，也从右表中返回所有匹配。
+连接谁就返回谁所有的，左连接就返回左边所有的，目的：完成表格的完整性。
+Full join：只要其中一个表中存在匹配，就返回行。
+
+
+8.10周一
+	个人进度任务：
+1)	Union为合并结果集，要求必须有相同数量的列，列必须有相似的数据类型，最终结果是有相同的数据类型。Select 列名from 表 union select 列名 from 表。Union只会挑选不同的值。
+2)	Select into 用于创建表的备份文件。
+3)	约束，用于限制加入表的数据类型。Not null（不允许空值）, unique（唯一标识）,主键约束，外键约束，check（限制列中值的范围）， default（向列中插入默认值）。
+4)	Create index 创建索引。Create index 索引名 on 表名（列名）
+5)	Drop 删除表、索引、数据库。
+	2、查询平均成绩大于60分的同学的学号和平均成绩；（group by 列名 having…）
+ 
+4、查询姓“刘”的老师的个数；个数使用count函数进行计数
+ 
+17、查询各科成绩最高和最低的分：以如下形式显示：课程ID，最高分，最低分 单组分组函数加group by
+ 
